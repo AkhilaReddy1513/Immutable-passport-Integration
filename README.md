@@ -3,10 +3,13 @@ Creating a simple application
 First, create a new directory for your application and navigate to it. Then, run the following command to initialize a new npm project:
 
 npm init -y
+
 Next, install the Passport SDK:
 
 npm install @imtbl/sdk
-Registering the application on Immutable Developer Hub
+
+Registering the application on Immutable Developer Hub:
+
 To register your application on Immutable Developer Hub, go to the Immutable Developer Hub: https://hub.immutable.com/ and create an account. Once you have created an account, click on the Applications tab and click on the Create Application button.
 
 Enter a name and description for your application and click on the Create button.
@@ -17,6 +20,7 @@ Installing and initialising the Passport client
 In your application, install the Passport SDK:
 
 npm install @imtbl/sdk
+
 Next, initialize the Passport client:
 
 import { config, passport } from '@imtbl/sdk';
@@ -44,6 +48,7 @@ loginButton.addEventListener('click', async () => {
   const loginUrl = await passportInstance.getLoginUrl();
   window.location.href = loginUrl;
 });
+
 When the user clicks on the login button, they will be redirected to the Immutable Passport login page. Once they have logged in, they will be redirected back to your application with an authorization code in the URL.
 
 You can then use the authorization code to obtain an access token and ID token from Passport:
@@ -100,4 +105,4 @@ This application is very simple, but it demonstrates the basic steps involved in
 GitHub repository link
 The guide and sample application can be found in the following GitHub repository:
 
-https://github.com/AkhilaReddy1513/Passport-Integration
+https://github.com/AkhilaReddy1513/Sample-passport-Integration
